@@ -1,0 +1,1 @@
+This folder contains a collection of projects developed in C++/OpenGL during the "Introduction to Computer Graphics." Assignment 3 is a functional game where the user gathers collectives on a heigh mapped surface. The final assignment takes assignment 3, and morphs the game world into a sphere to demonstrated addtional complexity.

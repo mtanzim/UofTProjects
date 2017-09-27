@@ -1,0 +1,4 @@
+#!/bin/sh
+
+APPDIR=$(dirname "$0")
+java  -Djava.library.path="$APPDIR" -cp "$APPDIR/lib/control_GUI_fixed.jar:$APPDIR/lib/core.jar:$APPDIR/lib/RXTXcomm.jar:$APPDIR/lib/serial.jar:$APPDIR/lib/gwoptics.jar" control_GUI_fixed

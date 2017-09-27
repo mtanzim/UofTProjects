@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+                      http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+  version="3.0"
+  metadata-complete="true">
+
+  <display-name>Tomcat Manager Application</display-name>
+  <description>
+    A scriptable management web application for the Tomcat Web Server;
+    Manager lets you view, load/unload/etc particular web applications.
+  </description>
+   
+    <display-name>helloworld</display-name>
+    <description>
+      helloworld.
+    </description>
+    
+    <servlet>
+        <servlet-name>Helloworldz</servlet-name>
+        <servlet-class>Helloworldz.Helloworldz</servlet-class>
+    </servlet>
+    
+   <servlet-mapping>
+        <servlet-name>Helloworldz</servlet-name>
+        <url-pattern>/servlet/Helloworldz</url-pattern>
+    </servlet-mapping>
+   
+</web-app>

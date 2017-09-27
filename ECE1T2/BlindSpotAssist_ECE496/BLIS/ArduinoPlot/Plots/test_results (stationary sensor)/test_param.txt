@@ -1,0 +1,13 @@
+2 batteries
+car approaching sensor
+distance array = 3 elements
+max_delta_d=40
+
+
+const int NUM_READINGS =3;//number of readings for distance array (needs to be at least 2 for the speed calculations to work;
+const int TRIGGER_DELAY=10; //how long to wait for echo (don't change this from 10)
+const int MAX_DELTA_D=40; //maximum allowed distance delta b/w two intervals to steady speed calculations
+
+
+preferred factors: 
+A10,D15

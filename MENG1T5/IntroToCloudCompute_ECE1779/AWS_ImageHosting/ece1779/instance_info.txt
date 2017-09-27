@@ -1,0 +1,6 @@
+id,timestamp,CPUUtilization
+i-e0417bce,Fri Mar 07 06:06:00 UTC 2014,0.33
+i-e1417bcf,Fri Mar 07 06:06:00 UTC 2014,0.0
+i-0b447e25,Fri Mar 07 06:06:00 UTC 2014,0.0
+ami-01f4cf68,Fri Mar 07 06:06:00 UTC 2014,0.11
+3

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+                      http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+  version="3.0"
+  metadata-complete="true">
+
+  <display-name>Tomcat Manager Application</display-name>
+  <description>
+    A scriptable management web application for the Tomcat Web Server;
+    Manager lets you view, load/unload/etc particular web applications.
+  </description>
+   
+    <display-name>ece1779</display-name>
+    <description>
+      ece1779
+    </description>
+    
+    <context-param>
+			<param-name>manUser</param-name>
+			<param-value>admin</param-value>
+		</context-param>  
+		
+		<context-param>
+			<param-name>manPassword</param-name>
+			<param-value>password</param-value>
+		</context-param>
+    
+    <servlet>
+    	<servlet-name>JSPInitialization</servlet-name>
+    	<servlet-class>ece1779.Initialization</servlet-class>
+  		<load-on-startup>1</load-on-startup>
+  		
+  		<!-- Replace with AWS key for your account -->
+		<init-param>
+			<param-name>AWSaccessKey</param-name>
+			<param-value>AKIAIH2DEJRQ73WKOO4A</param-value>
+		</init-param>
+		
+		<init-param>
+			<param-name>AWSsecretKey</param-name>
+			<param-value>05lQimHCpDq8jS3PnyH8uduoi0jmbGa1/SKBjZ2B</param-value>
+		</init-param>
+		
+		<init-param>
+			<param-name>dbDriver</param-name>
+			<param-value>com.mysql.jdbc.Driver</param-value>
+		</init-param>
+		
+		<!-- replace the info bellow with the details for your DB -->
+		<init-param>
+			<param-name>dbURL</param-name>
+			<param-value>jdbc:mysql://ece1779db.cumlmfbht0fr.us-east-1.rds.amazonaws.com/ece1779group10?</param-value>
+		</init-param>
+	
+		<init-param>
+			<param-name>dbUser</param-name>
+			<param-value>group10</param-value>
+		</init-param>  
+		
+		<init-param>
+			<param-name>dbPassword</param-name>
+			<param-value>2192143945</param-value>
+		</init-param>
+		
+  	</servlet>
+  	
+    <servlet>
+    	<servlet-name>FileUpload</servlet-name>
+    	<servlet-class>ece1779.FileUpload</servlet-class>
+  	</servlet>
+  	
+  	<servlet-mapping>
+        <servlet-name>FileUpload</servlet-name>
+        <url-pattern>/servlet/FileUpload</url-pattern>
+    </servlet-mapping>
+  	
+  	<servlet>
+    	<servlet-name>Logout</servlet-name>
+    	<servlet-class>ece1779.Logout</servlet-class>
+  	</servlet>
+  	
+  	<servlet-mapping>
+        <servlet-name>Logout</servlet-name>
+        <url-pattern>/servlet/Logout</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+    	<servlet-name>Form</servlet-name>
+    	<servlet-class>ece1779.Form</servlet-class>
+  	</servlet>
+  	
+  	<servlet-mapping>
+        <servlet-name>Form</servlet-name>
+        <url-pattern>/servlet/Form</url-pattern>
+    </servlet-mapping>
+   
+       <servlet>
+        <servlet-name>reg_reg</servlet-name>
+        <servlet-class>ece1779.man.reg_reg</servlet-class>
+    </servlet>
+    
+     <servlet-mapping>
+        <servlet-name>reg_reg</servlet-name>
+        <url-pattern>/servlet/reg_reg</url-pattern>
+    </servlet-mapping>
+  
+    <servlet>
+        <servlet-name>InstanceMetrics</servlet-name>
+        <servlet-class>ece1779.man.InstanceMetrics</servlet-class>
+    </servlet> 
+          
+    <servlet-mapping>
+        <servlet-name>InstanceMetrics</servlet-name>
+        <url-pattern>/servlet/InstanceMetrics</url-pattern>
+    </servlet-mapping> 
+   
+</web-app>

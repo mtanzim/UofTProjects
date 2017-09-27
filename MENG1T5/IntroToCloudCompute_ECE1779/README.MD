@@ -1,0 +1,1 @@
+Collection of projects developed during the "Introduction to Cloud Compute" course. Amazon Web Service was used to imnplement a image hosting service, utilizing priciples such as load balancing. Google App Engine was used to design a Neopets Clone. Please see presentations and documents in respective folders for additional details.
